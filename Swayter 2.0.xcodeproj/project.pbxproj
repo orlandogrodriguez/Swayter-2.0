@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		81631EE420509288001A9ED2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81631EE320509288001A9ED2 /* AppDelegate.swift */; };
-		81631EE620509288001A9ED2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81631EE520509288001A9ED2 /* ViewController.swift */; };
+		81631EE620509288001A9ED2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81631EE520509288001A9ED2 /* LoginViewController.swift */; };
 		81631EE920509288001A9ED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81631EE720509288001A9ED2 /* Main.storyboard */; };
 		81631EEB20509288001A9ED2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81631EEA20509288001A9ED2 /* Assets.xcassets */; };
 		81631EEE20509288001A9ED2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81631EEC20509288001A9ED2 /* LaunchScreen.storyboard */; };
+		81631EF72051B3AA001A9ED2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81631EF62051B3AA001A9ED2 /* Constants.swift */; };
+		81631EFA2051B44D001A9ED2 /* SwayterLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81631EF92051B44D001A9ED2 /* SwayterLog.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		81631EE020509288001A9ED2 /* Swayter 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swayter 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81631EE320509288001A9ED2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		81631EE520509288001A9ED2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		81631EE520509288001A9ED2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		81631EE820509288001A9ED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81631EEA20509288001A9ED2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81631EED20509288001A9ED2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81631EEF20509288001A9ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81631EF62051B3AA001A9ED2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		81631EF92051B44D001A9ED2 /* SwayterLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwayterLog.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,32 @@
 		81631EE220509288001A9ED2 /* Swayter 2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				81631EF82051B419001A9ED2 /* Tools */,
+				81631EF52051B2D5001A9ED2 /* ViewController */,
 				81631EE320509288001A9ED2 /* AppDelegate.swift */,
-				81631EE520509288001A9ED2 /* ViewController.swift */,
 				81631EE720509288001A9ED2 /* Main.storyboard */,
 				81631EEA20509288001A9ED2 /* Assets.xcassets */,
 				81631EEC20509288001A9ED2 /* LaunchScreen.storyboard */,
 				81631EEF20509288001A9ED2 /* Info.plist */,
 			);
 			path = "Swayter 2.0";
+			sourceTree = "<group>";
+		};
+		81631EF52051B2D5001A9ED2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81631EE520509288001A9ED2 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		81631EF82051B419001A9ED2 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				81631EF62051B3AA001A9ED2 /* Constants.swift */,
+				81631EF92051B44D001A9ED2 /* SwayterLog.swift */,
+			);
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +158,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81631EE620509288001A9ED2 /* ViewController.swift in Sources */,
+				81631EFA2051B44D001A9ED2 /* SwayterLog.swift in Sources */,
+				81631EE620509288001A9ED2 /* LoginViewController.swift in Sources */,
 				81631EE420509288001A9ED2 /* AppDelegate.swift in Sources */,
+				81631EF72051B3AA001A9ED2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
