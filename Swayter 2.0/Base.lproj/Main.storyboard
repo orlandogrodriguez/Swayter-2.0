@@ -36,12 +36,42 @@
                                 <rect key="frame" x="103" y="305" width="169" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAB-ym-wSu">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UTL-A4-6N5">
+                                        <rect key="frame" x="147" y="382" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VWs-0g-FxK">
+                                        <rect key="frame" x="261" y="382" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yd-Pg-gms">
+                                        <rect key="frame" x="8" y="8" width="359" height="237"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vAB-ym-wSu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fZs-lW-ZAn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vAB-ym-wSu" secondAttribute="bottom" id="hE3-mI-e7D"/>
+                            <constraint firstItem="vAB-ym-wSu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wcF-pf-D0s"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vAB-ym-wSu" secondAttribute="trailing" id="zFe-4U-Rd1"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="oBackgroundBlur" destination="j0q-1p-cCL" id="1cT-ns-rHV"/>
+                        <outlet property="oLoginView" destination="5yd-Pg-gms" id="xA6-IN-ZIL"/>
+                        <outlet property="oScrollView" destination="vAB-ym-wSu" id="PJb-Jf-EQQ"/>
+                        <outlet property="oSignUpView" destination="UTL-A4-6N5" id="rhD-ve-WnT"/>
+                        <outlet property="oSocialView" destination="VWs-0g-FxK" id="cWA-p4-Es9"/>
                         <outlet property="oSwayterLogo" destination="U53-Om-UOT" id="mT0-t7-48B"/>
                     </connections>
                 </viewController>
