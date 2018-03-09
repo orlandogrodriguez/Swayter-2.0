@@ -12,10 +12,13 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     // Instance Variables
     private let log: SwayterLog = SwayterLog()
+    var contentW: CGFloat!
+    var contentH: CGFloat!
     
     // Outlets
     @IBOutlet weak var oSwayterLogo: UIImageView!
     @IBOutlet weak var oBackgroundBlur: UIVisualEffectView!
+    @IBOutlet weak var oBackground: UIImageView!
     @IBOutlet weak var oScrollView: UIScrollView!
     
     @IBOutlet weak var oLoginView: UIView!
@@ -36,15 +39,17 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     // Delegate Method Implementations
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("Scrolling...")
+        oBackground.frame.origin.x = CGFloat(contentW * -0.2) + CGFloat(scrollView.contentOffset.x) * CGFloat(-0.05)
     }
     
     // Helper Functions
     // TODO: Add user as function parameter
     func loadInitialUI() {
         
-        var contentW = view.frame.width
-        var contentH = view.frame.height
+        oScrollView.delegate = self
+        contentH = view.frame.height
+        contentW = view.frame.width
+        oBackground.frame = CGRect(x: contentW * -0.2, y: 0, width: contentW + (contentW * 5 * 0.1), height: contentH)
         
         log.d(str: "Loading initial UI...")
         var user: String?
@@ -67,7 +72,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         oLoginView.frame = CGRect(x: 0, y: 0, width: contentW, height: contentH)
         oSignUpView.frame = CGRect(x: contentW, y: 0, width: contentW, height: contentH)
         oSocialView.frame = CGRect(x: contentW * 2, y: 0, width: contentW, height: contentH)
-        oScrollView.contentSize = CGSize(width: contentW * 3, height: contentH)
+        oScrollView.contentSize = CGSize(width: contentW * 3, height: contentH - 128 - 20)
+        
+        UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseIn, animations: {
+            self.oScrollView.alpha = 1.0
+        }, completion: nil)
         
     }
     
