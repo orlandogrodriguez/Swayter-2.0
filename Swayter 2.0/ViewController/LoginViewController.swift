@@ -80,11 +80,16 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         oScrollView.frame = CGRect(x: 0, y: view.frame.maxY - 200, width: contentW, height: contentH)
         
         
+        
+        
+        
         UIView.animate(withDuration: 1, delay: 0.25, options: .curveEaseInOut, animations: {
             self.oScrollView.alpha = 1.0
             self.oScrollView.frame = CGRect(x: 0, y: 120, width: self.contentW, height: self.contentH)
 
         }, completion: nil)
+        
+        
         
     }
     

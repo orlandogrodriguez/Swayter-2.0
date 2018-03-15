@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81517CBE205A230A00372703 /* LoginFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81517CBC205A230A00372703 /* LoginFormViewController.swift */; };
+		81517CBF205A230A00372703 /* LoginFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81517CBD205A230A00372703 /* LoginFormViewController.xib */; };
 		81631EE420509288001A9ED2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81631EE320509288001A9ED2 /* AppDelegate.swift */; };
 		81631EE620509288001A9ED2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81631EE520509288001A9ED2 /* LoginViewController.swift */; };
 		81631EE920509288001A9ED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81631EE720509288001A9ED2 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81517CBC205A230A00372703 /* LoginFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormViewController.swift; sourceTree = "<group>"; };
+		81517CBD205A230A00372703 /* LoginFormViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginFormViewController.xib; sourceTree = "<group>"; };
 		81631EE020509288001A9ED2 /* Swayter 2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swayter 2.0.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81631EE320509288001A9ED2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81631EE520509288001A9ED2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +69,8 @@
 				81631EEA20509288001A9ED2 /* Assets.xcassets */,
 				81631EEC20509288001A9ED2 /* LaunchScreen.storyboard */,
 				81631EEF20509288001A9ED2 /* Info.plist */,
+				81517CBC205A230A00372703 /* LoginFormViewController.swift */,
+				81517CBD205A230A00372703 /* LoginFormViewController.xib */,
 			);
 			path = "Swayter 2.0";
 			sourceTree = "<group>";
@@ -145,6 +151,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81517CBF205A230A00372703 /* LoginFormViewController.xib in Resources */,
 				81631EEE20509288001A9ED2 /* LaunchScreen.storyboard in Resources */,
 				81631EEB20509288001A9ED2 /* Assets.xcassets in Resources */,
 				81631EE920509288001A9ED2 /* Main.storyboard in Resources */,
@@ -160,6 +167,7 @@
 			files = (
 				81631EFA2051B44D001A9ED2 /* SwayterLog.swift in Sources */,
 				81631EE620509288001A9ED2 /* LoginViewController.swift in Sources */,
+				81517CBE205A230A00372703 /* LoginFormViewController.swift in Sources */,
 				81631EE420509288001A9ED2 /* AppDelegate.swift in Sources */,
 				81631EF72051B3AA001A9ED2 /* Constants.swift in Sources */,
 			);
