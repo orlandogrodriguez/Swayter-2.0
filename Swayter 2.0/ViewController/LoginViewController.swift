@@ -39,7 +39,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     // Delegate Method Implementations
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        oBackground.frame.origin.x = CGFloat(contentW * -0.2) + CGFloat(scrollView.contentOffset.x) * CGFloat(-0.05)
+        oBackground.frame.origin.x = CGFloat(scrollView.contentOffset.x) * CGFloat(-0.05)
     }
     
     // Helper Functions
@@ -49,7 +49,11 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         oScrollView.delegate = self
         contentH = view.frame.height
         contentW = view.frame.width
-        oBackground.frame = CGRect(x: contentW * -0.2, y: 0, width: contentW + (contentW * 5 * 0.1), height: contentH)
+        
+        oBackground.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        oBackground.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        oBackground.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
+        //oBackground.widthAnchor.constraint(equalTo: view.widthAnchor, constant: oBackground.frame.width * CGFloat(1.25)).isActive = true
         
         log.d(str: "Loading initial UI...")
         var user: String?
@@ -73,9 +77,13 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         oSignUpView.frame = CGRect(x: contentW, y: 0, width: contentW, height: contentH)
         oSocialView.frame = CGRect(x: contentW * 2, y: 0, width: contentW, height: contentH)
         oScrollView.contentSize = CGSize(width: contentW * 3, height: contentH - 128 - 20)
+        oScrollView.frame = CGRect(x: 0, y: view.frame.maxY - 200, width: contentW, height: contentH)
         
-        UIView.animate(withDuration: 1, delay: 0.5, options: .curveEaseIn, animations: {
+        
+        UIView.animate(withDuration: 1, delay: 0.25, options: .curveEaseInOut, animations: {
             self.oScrollView.alpha = 1.0
+            self.oScrollView.frame = CGRect(x: 0, y: 120, width: self.contentW, height: self.contentH)
+
         }, completion: nil)
         
     }
